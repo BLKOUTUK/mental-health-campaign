@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Without community, there is no liberation": Campaign Poster | BLKOUT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #1a1a1a;
+            display: flex;
+            justify-content: centre;
+            align-items: centre;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .poster {
+            width: 420mm;
+            height: 594mm;
+            background: #D4261A;
+            color: white;
+            padding: 40mm;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .draft-bar {
+            background: #F59E0B;
+            color: #000;
+            text-align: centre;
+            padding: 10mm;
+            margin: -40mm -40mm 30mm -40mm;
+            font-weight: 700;
+            font-size: 16pt;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48pt;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+        }
+
+        .logo img {
+            height: 80px;
+            width: auto;
+            text-align: centre;
+            margin-bottom: 20mm;
+        }
+
+        .hero-amount {
+            text-align: centre;
+            margin-bottom: 30mm;
+        }
+
+        .hero-amount .amount {
+            font-family: 'Poppins', sans-serif;
+            font-size: 120pt;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .hero-amount .per-person {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36pt;
+            font-weight: 700;
+            margin-top: 10mm;
+        }
+
+        .hero-amount .icon {
+            font-size: 60pt;
+            margin: 10mm 0;
+        }
+
+        .comparison {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8mm;
+            margin: 15mm 0;
+            border-radius: 4mm;
+            text-align: centre;
+        }
+
+        .comparison .text {
+            font-size: 24pt;
+            font-weight: 500;
+            margin-bottom: 6mm;
+        }
+
+        .comparison .icons {
+            display: flex;
+            justify-content: centre;
+            align-items: centre;
+            gap: 15mm;
+            font-size: 48pt;
+        }
+
+        .what-you-get {
+            margin: 20mm 0;
+        }
+
+        .what-you-get h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12mm;
+            text-align: centre;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8mm;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: centre;
+            gap: 6mm;
+        }
+
+        .benefit-item .icon {
+            font-size: 48pt;
+            color: #F4A261;
+            flex-shrink: 0;
+        }
+
+        .benefit-item .text {
+            font-size: 20pt;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .cost-comparison {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15mm;
+            margin: 20mm 0;
+            border-radius: 4mm;
+        }
+
+        .cost-comparison h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28pt;
+            font-weight: 700;
+            text-align: centre;
+            margin-bottom: 12mm;
+            text-transform: uppercase;
+        }
+
+        .cost-bar {
+            margin: 6mm 0;
+        }
+
+        .cost-bar .label {
+            font-size: 16pt;
+            font-weight: 600;
+            margin-bottom: 3mm;
+        }
+
+        .cost-bar .bar-container {
+            background: rgba(255, 255, 255, 0.2);
+            height: 12mm;
+            border-radius: 2mm;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .cost-bar .bar {
+            background: #F4A261;
+            height: 100%;
+            display: flex;
+            align-items: centre;
+            padding: 0 4mm;
+            font-weight: 700;
+            font-size: 14pt;
+        }
+
+        .population {
+            text-align: centre;
+            margin: 20mm 0;
+        }
+
+        .population h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32pt;
+            font-weight: 700;
+            margin-bottom: 8mm;
+        }
+
+        .population .number {
+            font-size: 48pt;
+            font-weight: 900;
+            color: #F4A261;
+        }
+
+        .population .subtitle {
+            font-size: 24pt;
+            margin-top: 4mm;
+        }
+
+        .total-investment {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15mm;
+            text-align: centre;
+            margin: 20mm 0;
+            border-radius: 4mm;
+        }
+
+        .total-investment .amount {
+            font-family: 'Poppins', sans-serif;
+            font-size: 72pt;
+            font-weight: 900;
+            color: #F4A261;
+            line-height: 1;
+        }
+
+        .total-investment .duration {
+            font-size: 24pt;
+            margin-top: 6mm;
+        }
+
+        .roi {
+            background: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);
+            padding: 15mm;
+            text-align: centre;
+            margin: 20mm 0;
+            border-radius: 4mm;
+        }
+
+        .roi .headline {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28pt;
+            font-weight: 700;
+            margin-bottom: 8mm;
+        }
+
+        .roi .ratio {
+            font-size: 64pt;
+            font-weight: 900;
+            color: #F4A261;
+        }
+
+        .roi .benefits {
+            font-size: 18pt;
+            margin-top: 6mm;
+            line-height: 1.5;
+        }
+
+        .cta {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15mm;
+            text-align: centre;
+            margin: 20mm 0;
+            border-radius: 4mm;
+        }
+
+        .cta h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36pt;
+            font-weight: 700;
+            margin-bottom: 8mm;
+        }
+
+        .cta p {
+            font-size: 20pt;
+            line-height: 1.6;
+            margin-bottom: 8mm;
+        }
+
+        .cta .urgency {
+            font-size: 32pt;
+            font-weight: 900;
+            margin-top: 10mm;
+            color: #F4A261;
+        }
+
+        .footer {
+            text-align: centre;
+            font-size: 14pt;
+            line-height: 1.8;
+            margin-top: 15mm;
+        }
+
+        .footer .org {
+            font-weight: 700;
+            font-size: 18pt;
+            margin-bottom: 4mm;
+        }
+
+        .footer .legal {
+            font-size: 12pt;
+            opacity: 0.8;
+            margin-top: 6mm;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .poster {
+                box-shadow: none;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            .poster {
+                width: 100%;
+                height: auto;
+                min-height: 100vh;
+                padding: 20mm;
+            }
+
+            .hero-amount .amount {
+                font-size: 80pt;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="draft-bar">DRAFT - NOT FOR CIRCULATION</div>
+
+        <div class="logo"><img src="images/blkoutlogo_wht_transparent.png" alt="BLKOUT"></div>
+
+        <div class="hero-amount">
+            <div class="amount">£57</div>
+            <div class="per-person">PER PERSON<br>PER YEAR</div>
+            <div class="icon">👤</div>
+        </div>
+
+        <div class="comparison">
+            <div class="text">Less than winter fuel payment (£500)</div>
+            <div class="icons">
+                <span>🔥</span>
+                <span style="font-size: 32pt;">vs</span>
+                <span style="color: #F4A261;">❤️‍🩹</span>
+            </div>
+        </div>
+
+        <div class="what-you-get">
+            <h2>What You Get</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="icon">🏛️</div>
+                    <div class="text">Community-owned cultural centres</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon">🏠</div>
+                    <div class="text">Affordable housing (land trust)</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon">⚖️</div>
+                    <div class="text">Legal advocates fighting discrimination</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon">📹</div>
+                    <div class="text">Community media documenting change</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon">🤝</div>
+                    <div class="text">Peer support when you need it</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon">💚</div>
+                    <div class="text">Crisis care that actually works</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon">✨</div>
+                    <div class="text" style="color: #F4A261;">Joy - because survival isn't enough</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cost-comparison">
+            <h3>The Alternative Costs More</h3>
+
+            <div class="cost-bar">
+                <div class="label">£171/year (Prevention)</div>
+                <div class="bar-container">
+                    <div class="bar" style="width: 2%;">This programme</div>
+                </div>
+            </div>
+
+            <div class="cost-bar">
+                <div class="label">£10,000/year (One psychiatric admission)</div>
+                <div class="bar-container">
+                    <div class="bar" style="width: 50%;"></div>
+                </div>
+            </div>
+
+            <div class="cost-bar">
+                <div class="label">£73,000/year (Homelessness emergency accommodation)</div>
+                <div class="bar-container">
+                    <div class="bar" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="population">
+            <h3>Population</h3>
+            <div class="number">35,000</div>
+            <div class="subtitle">Black queer men in the UK</div>
+        </div>
+
+        <div class="total-investment">
+            <div class="amount">£10 MILLION</div>
+            <div class="duration">over 5 years</div>
+        </div>
+
+        <div class="roi">
+            <div class="headline">EVERY £1 INVESTED SAVES</div>
+            <div class="ratio">£4-8</div>
+            <div class="benefits">
+                Reduced NHS costs • More employment<br>
+                Prevented homelessness • HIV prevention<br>
+                UK moral leadership
+            </div>
+        </div>
+
+        <div class="cta">
+            <h2>Making Equality Real</h2>
+            <p>Racism and homophobia created systems that deny dignity and humanity.</p>
+            <p><strong>This investment in Black queer men restores Britain's moral leadership globally.</strong></p>
+            <div class="urgency">400 years overdue<br>Payment due immediately</div>
+        </div>
+
+        <div class="footer">
+            <div class="org">BLKOUT | Community-owned liberation platform</div>
+            <div>For and by Black queer men in the UK</div>
+            <div class="legal">Based on UN Reparations Framework (GA Resolution 60/147, 2005)</div>
+            <div style="margin-top: 6mm; padding: 4mm; background: rgba(255,255,255,0.1); border-radius: 2mm;">
+                <strong style="font-size: 12pt;">📄 Full Evidence & Research:</strong><br>
+                platform-blkout.vercel.app/campaign-materials
+            </div>
+        </div>
+    </div>
+</body>
+</html>

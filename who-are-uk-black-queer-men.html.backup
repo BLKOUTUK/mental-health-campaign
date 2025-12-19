@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Are the UK's Black Queer Men? | BLKOUT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #264653;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        .page {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 25mm;
+            background: white;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20mm;
+            border-bottom: 3pt solid #2A9D8F;
+            padding-bottom: 10mm;
+        }
+
+        .logo img {
+            height: 120px;
+            width: auto;
+        }
+
+        .doc-type {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18pt;
+            font-weight: 600;
+            color: #264653;
+            text-align: right;
+            margin-top: 8pt;
+        }
+
+        .doc-type-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14pt;
+            font-weight: 600;
+            color: #2A9D8F;
+            text-align: right;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .doc-meta {
+            margin-top: 8mm;
+        }
+
+        .doc-meta .subject {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24pt;
+            font-weight: 600;
+            color: #2A9D8F;
+            margin-bottom: 4mm;
+            line-height: 1.2;
+        }
+
+        .doc-meta .subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 14pt;
+            font-weight: 400;
+            font-style: italic;
+            color: #264653;
+            margin-top: 2mm;
+        }
+
+        .doc-meta .meta-info {
+            font-size: 10pt;
+            color: rgba(38, 70, 83, 0.7);
+            margin-top: 4mm;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16pt;
+            font-weight: 600;
+            color: #2A9D8F;
+            margin-top: 10mm;
+            margin-bottom: 4mm;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14pt;
+            font-weight: 500;
+            color: #264653;
+            margin-top: 6mm;
+            margin-bottom: 3mm;
+        }
+
+        h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 12pt;
+            font-weight: 600;
+            color: #2A9D8F;
+            margin-top: 4mm;
+            margin-bottom: 2mm;
+        }
+
+        p {
+            font-size: 11pt;
+            margin-bottom: 4mm;
+            text-align: justify;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #2A9D8F;
+        }
+
+        .executive-summary {
+            background: linear-gradient(135deg, #2A9D8F 0%, #52B69A 100%);
+            color: white;
+            padding: 15mm;
+            margin: 10mm 0;
+            border-radius: 4pt;
+        }
+
+        .executive-summary h2 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .executive-summary p {
+            text-align: left;
+        }
+
+        .executive-summary strong {
+            color: #F4A261;
+        }
+
+        .executive-summary ul {
+            margin-left: 8mm;
+            margin-bottom: 4mm;
+        }
+
+        .key-finding {
+            background: #F0F9F8;
+            border-left: 4pt solid #2A9D8F;
+            padding: 10mm;
+            margin: 6mm 0;
+        }
+
+        .key-finding h3 {
+            color: #2A9D8F;
+            margin-top: 0;
+        }
+
+        .evidence-box {
+            background: #FFFBF5;
+            border: 2pt solid #F4A261;
+            padding: 8mm;
+            margin: 6mm 0;
+            border-radius: 4pt;
+        }
+
+        .evidence-box h4 {
+            color: #D4261A;
+            margin-top: 0;
+        }
+
+        ul, ol {
+            margin-left: 8mm;
+            margin-bottom: 4mm;
+            line-height: 1.8;
+        }
+
+        li {
+            margin-bottom: 2mm;
+        }
+
+        .citation {
+            font-size: 10pt;
+            color: rgba(38, 70, 83, 0.7);
+            font-style: italic;
+        }
+
+        .framework-section {
+            background: #E8F6F3;
+            border: 2pt solid #2A9D8F;
+            padding: 10mm;
+            margin: 8mm 0;
+            border-radius: 4pt;
+        }
+
+        .framework-section h3 {
+            color: #2A9D8F;
+            margin-top: 0;
+        }
+
+        .references {
+            font-size: 10pt;
+            line-height: 1.5;
+        }
+
+        .references p {
+            text-align: left;
+            margin-bottom: 3mm;
+            text-indent: -6mm;
+            padding-left: 6mm;
+        }
+
+        .footer {
+            border-top: 1pt solid #2A9D8F;
+            padding-top: 6mm;
+            margin-top: 10mm;
+            font-size: 9pt;
+            color: rgba(38, 70, 83, 0.6);
+        }
+
+        .footer .tagline {
+            font-weight: 500;
+            color: #2A9D8F;
+        }
+
+        .footer a {
+            color: #2A9D8F;
+            text-decoration: none;
+        }
+
+        .pullquote {
+            border-left: 4pt solid #2A9D8F;
+            padding-left: 15mm;
+            margin: 6mm 0;
+            font-style: italic;
+            font-size: 12pt;
+            color: #264653;
+        }
+
+        .chart-container {
+            background: #F8FFFE;
+            border: 1pt solid #2A9D8F;
+            padding: 10mm;
+            margin: 6mm 0;
+            border-radius: 4pt;
+        }
+
+        .chart-container h3 {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 4mm;
+            text-align: center;
+        }
+
+        .chart-wrapper {
+            position: relative;
+            height: 300px;
+            margin: 4mm 0;
+        }
+
+        @media print {
+            .page {
+                max-width: 100%;
+                margin: 0;
+                padding: 20mm;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .page {
+                padding: 15mm;
+            }
+            h2 {
+                font-size: 14pt;
+            }
+            h3 {
+                font-size: 12pt;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="logo"><img src="images/blkoutlogo_blk_transparent.png" alt="BLKOUT"></div>
+            <div>
+                <div class="doc-type-label">Demographic Analysis</div>
+                <div class="doc-type">Research Paper</div>
+            </div>
+        </div>
+
+        <div class="doc-meta">
+            <div class="subject">Who Are the UK's Black Queer Men?</div>
+            <div class="subtitle">A Critical Demographic Analysis for Policy and Community</div>
+            <div class="meta-info">
+                <strong>BLKOUT</strong> • Community-Owned Liberation Platform • For and By Black Queer Men in the UK<br>
+                <strong>Publication Date:</strong> October 2025<br>
+                <strong>Document Type:</strong> Research Paper<br>
+                <strong>Classification:</strong> Public<br>
+                <strong>License:</strong> Creative Commons BY-NC-SA 4.0
+            </div>
+        </div>
+
+        <div class="executive-summary">
+            <h2>Executive Summary</h2>
+
+            <p>I went looking for comprehensive data on Black queer men in the UK and found myself staring at structured absence. Not the simple absence of oversight or neglect, but what adrienne maree brown identifies as "the sound of erasure at work" - that particular silence that emerges when systems are designed to not see you. This article attempts to break that silence, not with perfect data, because perfection is the enemy of progress, but with what we can piece together from fragments. Because waiting for institutional completeness while communities navigate crisis isn't strategy; it's complicity dressed in methodology.</p>
+
+            <p>What emerged from piecing together Census data, comparative research, and asylum statistics suggests there are between <strong>50,000 and 65,000</strong> Black queer men in the UK, with perhaps <strong>25,000 to 32,500</strong> concentrated in Greater London. These numbers rest on several critical observations that transform basic arithmetic into political reality. The UK's Black population is fourteen years younger than the white population, with median ages of 31 versus 45. Generation Z identifies as lesbian, gay or bisexual at 6.91%, more than double the overall rate of 3.16%. When you add those seeking asylum from homophobic laws that Britain wrote during empire - laws we exported then act surprised when people flee - the numbers compound like historical interest.</p>
+
+            <p>Our methodology embraces expansive definitions of both Blackness and queerness, rooted in solidarity rather than surveillance, in affinity rather than blood quantum. We acknowledge every limitation in this work because this is about collective learning, not institutional authority. And crucially, we reject place-based frameworks that assume community follows postcode boundaries when our survival has always depended on relationships that transcend geography. The London School of Hygiene & Tropical Medicine / Stonewall study (2016) found Black gay and bisexual men were five times more likely to attempt suicide than white gay and bisexual men. The Trevor Project UK (2024) found 29% of Black LGBTQ+ young people attempted suicide in the past year. When breathing itself becomes resistance, the question isn't whether our mathematics are perfect but whether we'll act on what we know while building toward what we need to know.</p>
+        </div>
+
+        <h2>Why This Question Matters: On Measurement and Invisibility</h2>
+
+        <p>Caroline Criado Perez captured a fundamental truth about data and power when she wrote, "We don't collect data about minorities because we don't care about them. We don't care about them because we don't collect data about them." This circular logic maintains itself through what Angela Davis called "the change that means no change" - those surface-level diversity initiatives that create an illusion of progress while leaving structural inequities intact. Black queer men exist in this paradox, appearing everywhere and nowhere simultaneously. We surface in reports about "BAME communities" that flatten our specificities into acronyms, in "LGBT+ strategies" that default to white gay male experiences, yet remain mysteriously absent when our particular intersection of marginalization produces particular patterns of crisis.</p>
+
+        <p>This analysis emerges from necessity rather than academic curiosity. To advocate for what I'm calling mental health reparations for Black queer men - and I use the word reparations deliberately, to invoke both historical debt and contemporary obligation - we must first prove we exist in numbers sufficient to warrant institutional response. The violence isn't just in the neglect; it's in requiring mathematical proof of existence before considering whether people deserve to survive. It's in demanding that communities make themselves legible to systems that were designed to not see them, or only to see them as an inchoate threat, like asking people to draw their own faces on blank census forms to populate an e-fit database.</p>
+
+        <div class="pullquote">
+            What follows is a provisional synthesis of imperfect data sources, offered in the spirit of collective knowledge-building rather than institutional authority. This is an invitation to dialogue for researchers, statisticians, and community members who might hold pieces of this puzzle we're missing.
+        </div>
+
+        <h2>The Problem with Place: Rethinking Geographic Boundaries</h2>
+
+        <p>Before presenting any geographic analysis, we need to interrogate the fundamental assumptions of place-based service delivery that currently structure UK health and social care. The problem isn't simply technical but philosophical, rooted in how we imagine community itself. England's health services operate through Integrated Care Boards, NHS trusts, and local authorities whose boundaries were drawn for administrative convenience rather than demographic reality. For dispersed minorities like Black queer men, these arbitrary lines don't just fail to serve; they actively fragment communities whose survival depends on connection across space.</p>
+
+        <p>The geography of queerness has never followed postal districts. As geographer Jack Halberstam notes, "Queer uses of time and space develop in opposition to the institutions of family, heterosexuality, and reproduction, and according to other logics of location, movement, and identification." My community isn't defined by walking distance from my flat but by the two-hour journey to reach chosen family, the night bus routes that connect scattered Black queer venues, the WhatsApp groups that hold us between physical gatherings.</p>
+
+        <div class="evidence-box">
+            <h4>The Power to Change Failure</h4>
+            <p>Power to Change, a lottery-funded trust, invested £80 million in "community businesses" between 2015 and 2023. Despite LGBTQ+ people constituting roughly 5% of the UK population, and a well-documented decline in gay venues in the decade prior to their funding, they supported exactly <strong>zero LGBTQ+ community venues</strong>. Not one. The reason reveals everything: their funding criteria required serving "local residents" within walking distance. They literally could not conceptualize community that organizes across geography rather than within it.</p>
+        </div>
+
+        <h2>Defining "Black": Expansive, Affinity-Based, Transcending Genetics</h2>
+
+        <p>The 2021 Census recorded 1,488,387 people identifying as Black African, 623,115 as Black Caribbean, and 297,781 as Black Other across England and Wales. It also captured approximately 535,000 people identifying as Mixed White and Black Caribbean and 165,000 as Mixed White and Black African, bringing the total population racialized as Black or Mixed with Black heritage to just over 3.1 million.</p>
+
+        <div class="chart-placeholder">
+            <h3>Chart: Median Age by Ethnicity (2021 Census)</h3>
+            <pre>
+White: 45 years
+Black Caribbean: 39 years
+Black African: 32 years
+Mixed White/Black Caribbean: 22 years
+Mixed White/Black African: 19 years
+
+[Bar chart showing dramatic age differences, with Mixed populations
+less than half the age of White]
+            </pre>
+        </div>
+
+        <p>What transforms these numbers from demographic data to political possibility is age. Mixed White and Black populations in the UK have a median age of just 19 years - the youngest demographic in the entire country. More than half are Gen Z or younger Millennials, generations that claim queerness at unprecedented rates. This isn't merely statistical trivia but fundamental to understanding who we are as a community. The future of Black Britain is young, increasingly mixed, and significantly queerer than any generation before.</p>
+
+        <h2>The Age Factor: Why Demographics Transform Everything</h2>
+
+        <p>Sometimes a single dataset reshapes everything that follows. The 2021 Census revealed median ages by ethnicity that transform any analysis of Black queer populations. White populations in the UK have a median age of 45 years. Black African populations: 32 years. Black Caribbean: 39 years. But here's where it gets revolutionary: Mixed White and Black Caribbean populations have a median age of 22 years, and Mixed White and Black African populations just 19 years.</p>
+
+        <div class="chart-placeholder">
+            <h3>Chart: LGB Identification by Generation (ONS 2022)</h3>
+            <pre>
+Silent Generation (pre-1946): 0.89%
+Baby Boomers (1946-1964): 1.65%
+Generation X (1965-1980): 2.53%
+Millennials (1981-1996): 4.43%
+Generation Z (1997-2012): 6.91%
+
+[Rising line graph showing exponential increase across generations]
+            </pre>
+        </div>
+
+        <p>The Office for National Statistics found that Generation Z identifies as lesbian, gay, or bisexual at 6.91%, compared to 4.43% for Millennials, 2.53% for Generation X, and just 0.89% for the Silent Generation. We're witnessing a generational transformation in how people understand and claim their sexualities.</p>
+
+        <h2>Geographic Distribution: Where We Are (And Why It Matters)</h2>
+
+        <p>Despite my critique of place-based thinking, pragmatism demands acknowledging where Black queer men concentrate geographically. Services need locations even if communities transcend them.</p>
+
+        <div class="chart-placeholder">
+            <h3>Chart: Geographic Distribution of Black Queer Men (Estimated)</h3>
+            <pre>
+Greater London: 25,000-32,500 (50%)
+Birmingham: 3,000-4,000 (7%)
+Manchester: 2,000-2,500 (4%)
+Bristol: 1,500-2,000 (3%)
+Leeds: 1,000-1,500 (2%)
+Other urban: 15,000-19,500 (30%)
+Rural/suburban: 2,000-3,000 (4%)
+
+[Map of UK with proportional circles showing concentration]
+            </pre>
+        </div>
+
+        <h2>People Seeking Asylum: Colonial Chickens, Meet Roost</h2>
+
+        <p>We cannot discuss Black queer populations in the UK without acknowledging those who arrive seeking asylum from laws bequeathed by imperial Britain. Thirty-six of fifty-three Commonwealth countries criminalize same-sex relationships, and nearly 70% of these laws trace directly to British colonial imposition. The same Victorian language echoes across continents: "unnatural offences," "gross indecency," "carnal knowledge against the order of nature." Britain exported homophobia as deliberately as it exported tea culture, then feigns surprise when people flee the consequences.</p>
+
+        <p>Between 2023 and 2024, the UK received approximately 3,500 asylum claims based on sexual orientation. Conservative estimates suggest 8,000 to 12,000 LGBTQ+ people have sought asylum from predominantly Black countries and now live in the UK, many in acute mental health crisis from compounded traumas.</p>
+
+        <h2>Addressing Objections: Yes, We've Heard Your Concerns</h2>
+
+        <div class="key-finding">
+            <h3>"These numbers seem speculative"</h3>
+            <p>Every population estimate involves assumptions and extrapolations. Epidemiologists estimate disease prevalence, economists project market trends, demographers model population changes - all using incomplete data and informed assumptions. The question isn't whether estimates involve uncertainty but whether we make our methods transparent. I've shown every calculation, named every assumption, cited every source. If you have better data, bring it forward. But "seems high" isn't methodology - it's discomfort with Black queer existence at scale.</p>
+        </div>
+
+        <div class="key-finding">
+            <h3>"Why separate services? Isn't that segregation?"</h3>
+            <p>Mainstream LGBTQ+ services consistently fail Black queer men, not primarily through malice but through designing for white gay male defaults and calling a drop of melanin in a marketing campaign inclusion. When Black gay and bisexual men are 5 times more likely to attempt suicide than white gay men (LSHTM/Stonewall 2016)—that's a 400% disparity—when mental health services can't recognize how racism compounds homophobia, when therapists pathologize survival strategies as disorders, "inclusion" becomes a deadly fiction. Targeted services aren't segregation but survival strategy.</p>
+        </div>
+
+        <div class="chart-container">
+            <h3>Mental Health Disparities - Suicide Attempt Likelihood</h3>
+            <div class="chart-wrapper">
+                <canvas id="mentalHealthChart"></canvas>
+            </div>
+            <p class="citation" style="text-align: center; margin-top: 3mm;">
+                LSHTM/Stonewall study (2016) of 5,799 gay and bisexual men found Black gay/bisexual men were 5 times more likely to attempt suicide than white peers. This represents a 400% disparity. Additionally, Trevor Project UK (2024) found 29% of Black LGBTQ+ young people attempted suicide in the past year.
+            </p>
+        </div>
+
+        <h2>Methodology: How We Built These Estimates</h2>
+
+        <p>For those who need to see the working, here's exactly how we calculated these figures. We began with 2021 Census data on ethnic populations, identifying approximately 3.1 million people across Black African, Black Caribbean, Black Other, and Mixed Black categories. We applied gender distribution patterns yielding approximately 1.5 million Black males in England and Wales.</p>
+
+        <p>Our age-adjustment methodology recognized that Black populations skew significantly younger, with over half under 30 compared to 35% of white populations. Young people identify as LGB at more than double the rate of older generations. Conservative adjustment suggested multiplying base estimates by 1.3; moderate adjustment by 1.5. This produced initial estimates of 62,500 to 72,000 Black LGB males.</p>
+
+        <p>Research on disclosure patterns consistently shows undercounting of stigmatized identities, particularly among ethnic minorities. Studies suggest 25-40% of same-sex attracted people don't disclose on surveys. For Black queer men navigating intersectional stigma, we estimated 30% undercounting as a moderate position.</p>
+
+        <p>Our final estimates of <strong>50,000-65,000 Black queer men in the UK</strong>, with <strong>25,000-32,500 in Greater London</strong>, represent moderate positions between conservative census floors and upper bounds suggested by age and disclosure adjustments.</p>
+
+        <h2>Conclusion: An Invitation to Collective Seeing</h2>
+
+        <p>We began with a question that shouldn't need asking: who are the UK's Black queer men? The answer exceeds numbers, though numbers matter when they determine whether services exist or communities remain invisible. Through piecing together fragments of data, patterns of possibility emerge. I estimate between 50,000 and 65,000 Black queer men live in the UK, with 25,000 to 32,500 concentrated in Greater London. These figures aren't perfect - perfection isn't possible when counting those whom systems render uncountable. But they're good enough to act on while we build better.</p>
+
+        <div class="pullquote">
+            The LSHTM/Stonewall study (2016) found Black gay and bisexual men were five times more likely to attempt suicide than white gay and bisexual men—a 400% disparity. The Trevor Project UK (2024) found 29% of Black LGBTQ+ young people attempted suicide in the past year. When disparities are this stark, targeted intervention isn't special pleading or identity politics but public health necessity. Actually, let's name it properly: this is about reparations.
+        </div>
+
+        <p>adrienne maree brown writes that "small is good, small is all" - that transformation happens through fractals, small patterns that repeat at scale. Each Black queer man who survives is a revolution. Each one who thrives rewrites what's possible. But individual resilience can't substitute for collective resources. We need both: the personal practices that keep us alive and the institutional changes that make living less lethal.</p>
+
+        <p>This analysis offers what we know now as foundation for what we must build. Not as final word but as opening conversation. Not as academic exercise but as organizing tool. Because when we know better, we must do better. The question isn't whether these estimates achieve statistical perfection but whether we care enough about Black queer men's lives to act on good-enough knowledge while building better.</p>
+
+        <p><strong>What's your choice?</strong></p>
+
+        <h2>References</h2>
+
+        <div class="references">
+            <h3 style="color: #2A9D8F; margin-top: 0;">On Black Queer Life and Liberation</h3>
+
+            <p>Ahmed, Sara. (2006). <em>Queer Phenomenology: Orientations, Objects, Others</em>. Durham: Duke University Press.</p>
+
+            <p>Baldwin, James. (1985). <em>The Evidence of Things Not Seen</em>. New York: Holt, Rinehart and Winston.</p>
+
+            <p>Boykin, Keith. (2005). <em>Beyond the Down Low: Sex, Lies, and Denial in Black America</em>. New York: Carroll & Graf.</p>
+
+            <p>Cohen, Cathy J. (1997). "Punks, bulldaggers, and welfare queens: The radical potential of queer politics?" <em>GLQ: A Journal of Lesbian and Gay Studies</em>, 3(4), 437-465.</p>
+
+            <p>Ferguson, Roderick A. (2004). <em>Aberrations in Black: Toward a Queer of Color Critique</em>. Minneapolis: University of Minnesota Press.</p>
+
+            <p>Halberstam, Jack. (2005). <em>In a Queer Time and Place: Transgender Bodies, Subcultural Lives</em>. New York: NYU Press.</p>
+
+            <p>Hemphill, Essex. (Ed.). (1991). <em>Brother to Brother: New Writings by Black Gay Men</em>. Boston: Alyson Publications.</p>
+
+            <p>Johnson, E. Patrick. (2008). <em>Sweet Tea: Black Gay Men of the South</em>. Chapel Hill: University of North Carolina Press.</p>
+
+            <p>Lorde, Audre. (1984). <em>Sister Outsider: Essays and Speeches</em>. Trumansburg, NY: Crossing Press.</p>
+
+            <h3 style="color: #2A9D8F; margin-top: 8mm;">On UK Racial Dynamics and Black British Studies</h3>
+
+            <p>Andrews, Kehinde. (2021). <em>The New Age of Empire: How Racism and Colonialism Still Rule the World</em>. London: Allen Lane.</p>
+
+            <p>Gilroy, Paul. (1987). <em>There Ain't No Black in the Union Jack</em>. London: Hutchinson.</p>
+
+            <p>Gilroy, Paul. (1993). <em>The Black Atlantic: Modernity and Double Consciousness</em>. London: Verso.</p>
+
+            <p>Hall, Stuart. (1992). "New ethnicities." In J. Donald & A. Rattansi (Eds.), <em>Race, Culture and Difference</em> (pp. 252-259). London: Sage.</p>
+
+            <h3 style="color: #2A9D8F; margin-top: 8mm;">On Demographics, Methodology, and Data</h3>
+
+            <p>Criado Perez, Caroline. (2019). <em>Invisible Women: Exposing Data Bias in a World Designed for Men</em>. London: Chatto & Windus.</p>
+
+            <p>Office for National Statistics. (2023). <em>Sexual orientation, England and Wales: Census 2021</em>. Newport: ONS.</p>
+
+            <p>Office for National Statistics. (2022). <em>Sexual orientation, UK: 2020</em>. Newport: ONS.</p>
+
+            <p><em>This reference list acknowledges the intellectual and activist labor that makes this analysis possible. It is necessarily incomplete - countless community organizers, unnamed activists, and everyday acts of resistance have shaped our understanding even when they don't appear in academic citations.</em></p>
+        </div>
+
+        <div class="footer">
+            <div class="org-info">
+                <strong class="tagline">BLKOUT</strong> • Community-Owned Liberation Platform<br>
+                For and By Black Queer Men in the UK<br>
+                <a href="https://blkoutuk.com">blkoutuk.com</a>
+            </div>
+
+            <div style="background: #F0F9F8; border: 2pt solid #2A9D8F; padding: 6mm; margin-top: 6mm; border-radius: 3pt;">
+                <h3 style="font-size: 10pt; font-weight: 600; color: #2A9D8F; margin-bottom: 3mm;">For Citations, Data Access, or Collaboration Inquiries</h3>
+                <p style="font-size: 8pt; line-height: 1.5; margin-bottom: 0;">
+                    <strong>BLKOUT Research Initiative</strong><br>
+                    Email: research@blkout.uk<br>
+                    Web: <a href="https://blkout.vercel.app" style="color: #2A9D8F;">blkout.vercel.app</a>
+                </p>
+                <p style="font-size: 8pt; line-height: 1.5; margin-top: 3mm; margin-bottom: 0;">
+                    <strong>This briefing is freely shared under Creative Commons BY-NC-SA 4.0 license for organising, education, and advocacy purposes.</strong>
+                </p>
+                <p style="font-size: 8pt; line-height: 1.5; margin-top: 3mm; margin-bottom: 0;">
+                    <strong>Gratitude:</strong> This analysis stands on foundations built by Black LGBTQ+ activists, researchers, and organizers who demanded visibility when visibility meant danger. We honour Marsha P. Johnson, Sylvia Rivera, Audre Lorde, Ivor Cummings, Cecil Belfield, James Baldwin, Essex Hemphill, Marlon Riggs, and countless others whose names we'll never know but whose courage made our existence possible.
+                </p>
+            </div>
+
+            <p style="margin-top: 6mm; text-align: center; font-style: italic;">
+                <strong>#BlackQueerLivesMatter</strong> <strong>#AllGoodThingsMustBegin</strong>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Mental Health Disparities Chart
+        const mentalHealthCtx = document.getElementById('mentalHealthChart').getContext('2d');
+        new Chart(mentalHealthCtx, {
+            type: 'bar',
+            data: {
+                labels: ['General male\npopulation', 'White gay men', 'Black gay/\nbisexual men'],
+                datasets: [{
+                    label: 'Relative Risk (multiplier)',
+                    data: [0.1, 1.0, 5.0],
+                    backgroundColor: [
+                        'rgba(38, 70, 83, 0.6)',
+                        'rgba(168, 218, 220, 0.7)',
+                        'rgba(212, 38, 26, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgba(38, 70, 83, 1)',
+                        'rgba(168, 218, 220, 1)',
+                        'rgba(212, 38, 26, 1)'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let value = context.parsed.y;
+                                if (value === 0.1) return 'Baseline (general population)';
+                                if (value === 1.0) return 'White gay men (comparison group)';
+                                if (value === 5.0) return '5x more likely (400% disparity)';
+                                return value + 'x';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 6,
+                        title: {
+                            display: true,
+                            text: 'Relative Risk (multiplier)',
+                            font: {
+                                size: 12,
+                                weight: 'bold'
+                            }
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return value + 'x';
+                            }
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Population Group',
+                            font: {
+                                size: 12,
+                                weight: 'bold'
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cost Comparison: £50/person/year vs Crisis Costs -->
+  <!-- Revolutionary Red + Liberation Teal Design System -->
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="Poppins, sans-serif" font-size="26" font-weight="700" fill="#264653" text-anchor="middle">
+    Why £50 Per Person Per Year?
+  </text>
+  <text x="400" y="62" font-family="Inter, sans-serif" font-size="15" font-weight="500" fill="#666" text-anchor="middle">
+    Prevention investment vs Crisis intervention costs
+  </text>
+
+  <!-- Main Investment Box (Center Top) -->
+  <g transform="translate(400, 110)">
+    <rect x="-150" y="-50" width="300" height="90" fill="linear-gradient(135deg, #2A9D8F 0%, #264653 100%)" rx="8"/>
+    <circle cx="0" cy="-5" r="35" fill="rgba(255, 255, 255, 0.15)"/>
+    <text x="0" y="10" font-size="32" text-anchor="middle">💚</text>
+    <text x="0" y="-35" font-family="Poppins, sans-serif" font-size="12" font-weight="600" fill="#F4A261" text-anchor="middle">
+      THIS PROGRAMME
+    </text>
+    <text x="0" y="45" font-family="Poppins, sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" text-anchor="middle">
+      £50/year
+    </text>
+  </g>
+
+  <!-- Comparison Bars -->
+  <g transform="translate(100, 230)">
+
+    <!-- Bar 1: Winter Fuel Payment -->
+    <g id="comparison-1">
+      <text x="0" y="0" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#264653">
+        Winter Fuel Payment
+      </text>
+      <rect x="0" y="10" width="600" height="40" fill="#E0E0E0" rx="4"/>
+      <rect x="0" y="10" width="500" height="40" fill="#F4A261" rx="4"/>
+      <text x="510" y="35" font-family="Poppins, sans-serif" font-size="18" font-weight="700" fill="#264653">
+        £500/year
+      </text>
+      <text x="15" y="35" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#264653">
+        10x more than this programme
+      </text>
+    </g>
+
+    <!-- Bar 2: One Psychiatric Admission -->
+    <g id="comparison-2" transform="translate(0, 80)">
+      <text x="0" y="0" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#264653">
+        One Psychiatric Admission
+      </text>
+      <rect x="0" y="10" width="600" height="40" fill="#E0E0E0" rx="4"/>
+      <rect x="0" y="10" width="600" height="40" fill="#E76F51" rx="4"/>
+      <text x="610" y="35" font-family="Poppins, sans-serif" font-size="18" font-weight="700" fill="#D4261A">
+        £10,000
+      </text>
+      <text x="15" y="35" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">
+        200x more - prevented by this programme
+      </text>
+    </g>
+
+    <!-- Bar 3: Emergency Accommodation (1 month) -->
+    <g id="comparison-3" transform="translate(0, 160)">
+      <text x="0" y="0" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#264653">
+        Emergency Accommodation (1 month)
+      </text>
+      <rect x="0" y="10" width="600" height="40" fill="#E0E0E0" rx="4"/>
+      <rect x="0" y="10" width="600" height="40" fill="#D4261A" rx="4"/>
+      <text x="610" y="35" font-family="Poppins, sans-serif" font-size="18" font-weight="700" fill="#D4261A">
+        £6,000
+      </text>
+      <text x="15" y="35" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">
+        120x more - prevented by housing support
+      </text>
+    </g>
+
+    <!-- Bar 4: NHS Mental Health Spending (average) -->
+    <g id="comparison-4" transform="translate(0, 240)">
+      <text x="0" y="0" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#264653">
+        NHS Mental Health Spending (per person avg)
+      </text>
+      <rect x="0" y="10" width="600" height="40" fill="#E0E0E0" rx="4"/>
+      <rect x="0" y="10" width="141" height="40" fill="#2A9D8F" opacity="0.6" rx="4"/>
+      <text x="150" y="35" font-family="Poppins, sans-serif" font-size="18" font-weight="700" fill="#2A9D8F">
+        £141/year
+      </text>
+      <text x="15" y="35" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#264653">
+        This programme addresses gaps NHS can't reach
+      </text>
+    </g>
+  </g>
+
+  <!-- Key Insight Box -->
+  <g transform="translate(100, 460)">
+    <rect x="0" y="0" width="600" height="55" fill="#F0F9F8" rx="6" stroke="#2A9D8F" stroke-width="2"/>
+    <text x="300" y="22" font-family="Poppins, sans-serif" font-size="14" font-weight="700" fill="#2A9D8F" text-anchor="middle">
+      Prevention Investment, Not Crisis Intervention
+    </text>
+    <text x="300" y="42" font-family="Inter, sans-serif" font-size="12" fill="#264653" text-anchor="middle">
+      Partnership model prevents costs while building sustainable community capacity for wellbeing
+    </text>
+  </g>
+
+  <!-- Scale Reference -->
+  <g transform="translate(50, 95)">
+    <text x="0" y="0" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#888">
+      Cost scale (£)
+    </text>
+    <line x1="0" y1="10" x2="20" y2="10" stroke="#888" stroke-width="1"/>
+    <text x="0" y="25" font-family="Inter, sans-serif" font-size="10" fill="#888">
+      £0
+    </text>
+    <line x1="0" y1="495" x2="20" y2="495" stroke="#888" stroke-width="1"/>
+    <text x="0" y="510" font-family="Inter, sans-serif" font-size="10" fill="#888">
+      £10k
+    </text>
+  </g>
+</svg>

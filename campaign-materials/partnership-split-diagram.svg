@@ -1,0 +1,191 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- BLKOUT Partnership Model 60/40 Split Visualization -->
+  <!-- Revolutionary Red + Liberation Teal Design System -->
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="Poppins, sans-serif" font-size="28" font-weight="700" fill="#264653" text-anchor="middle">
+    Partnership Sustainability Model
+  </text>
+  <text x="400" y="70" font-family="Poppins, sans-serif" font-size="18" font-weight="600" fill="#D4261A" text-anchor="middle">
+    £8.9M Investment Split
+  </text>
+
+  <!-- Main Split Container -->
+  <g transform="translate(50, 100)">
+
+    <!-- Partnership Side (60% - Left, Teal) -->
+    <g id="partnership-side">
+      <!-- Background -->
+      <rect x="0" y="0" width="420" height="450" fill="#F0F9F8" rx="8"/>
+      <rect x="0" y="0" width="8" height="450" fill="#2A9D8F" rx="4"/>
+
+      <!-- Header -->
+      <text x="210" y="40" font-family="Poppins, sans-serif" font-size="22" font-weight="700" fill="#2A9D8F" text-anchor="middle">
+        Partnership Model
+      </text>
+      <text x="210" y="70" font-family="Poppins, sans-serif" font-size="32" font-weight="800" fill="#2A9D8F" text-anchor="middle">
+        60%
+      </text>
+      <text x="210" y="100" font-family="Poppins, sans-serif" font-size="24" font-weight="700" fill="#2A9D8F" text-anchor="middle">
+        £5.34M
+      </text>
+
+      <!-- Percentage Bar -->
+      <rect x="20" y="120" width="380" height="16" fill="#E0F2F1" rx="8"/>
+      <rect x="20" y="120" width="228" height="16" fill="#2A9D8F" rx="8"/>
+
+      <!-- Cost Items -->
+      <g transform="translate(20, 155)">
+        <!-- Item 1: Embedded Roles -->
+        <rect x="0" y="0" width="6" height="35" fill="#2A9D8F" opacity="0.4" rx="3"/>
+        <text x="15" y="12" font-family="Poppins, sans-serif" font-size="16" font-weight="700" fill="#2A9D8F">
+          £2.1M
+        </text>
+        <text x="15" y="30" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#264653">
+          10 Embedded FTE Roles (5 years)
+        </text>
+
+        <!-- Item 2: Partnership Overhead -->
+        <rect x="0" y="50" width="6" height="35" fill="#2A9D8F" opacity="0.4" rx="3"/>
+        <text x="15" y="62" font-family="Poppins, sans-serif" font-size="16" font-weight="700" fill="#2A9D8F">
+          £1.5M
+        </text>
+        <text x="15" y="80" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#264653">
+          Partnership Overhead (10 orgs)
+        </text>
+
+        <!-- Item 3: Service Gap Fund -->
+        <rect x="0" y="100" width="6" height="35" fill="#2A9D8F" opacity="0.4" rx="3"/>
+        <text x="15" y="112" font-family="Poppins, sans-serif" font-size="16" font-weight="700" fill="#2A9D8F">
+          £1.0M
+        </text>
+        <text x="15" y="130" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#264653">
+          Service Gap Bridging Fund
+        </text>
+
+        <!-- Item 4: Training -->
+        <rect x="0" y="150" width="6" height="35" fill="#2A9D8F" opacity="0.4" rx="3"/>
+        <text x="15" y="162" font-family="Poppins, sans-serif" font-size="16" font-weight="700" fill="#2A9D8F">
+          £500k
+        </text>
+        <text x="15" y="180" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#264653">
+          Training & Development
+        </text>
+
+        <!-- Item 5: Evaluation -->
+        <rect x="0" y="200" width="6" height="35" fill="#2A9D8F" opacity="0.4" rx="3"/>
+        <text x="15" y="212" font-family="Poppins, sans-serif" font-size="16" font-weight="700" fill="#2A9D8F">
+          £240k
+        </text>
+        <text x="15" y="230" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#264653">
+          Community-Led Evaluation
+        </text>
+      </g>
+
+      <!-- Icon: Healing/Partnership -->
+      <circle cx="210" cy="415" r="20" fill="#2A9D8F" opacity="0.2"/>
+      <text x="210" y="425" font-size="24" text-anchor="middle">🤝</text>
+    </g>
+
+    <!-- Consultancy Side (40% - Right, Red) -->
+    <g id="consultancy-side" transform="translate(430, 0)">
+      <!-- Background -->
+      <rect x="0" y="0" width="280" height="450" fill="#FFF5F0" rx="8"/>
+      <rect x="0" y="0" width="8" height="450" fill="#D4261A" rx="4"/>
+
+      <!-- Header -->
+      <text x="140" y="40" font-family="Poppins, sans-serif" font-size="22" font-weight="700" fill="#D4261A" text-anchor="middle">
+        Central Consultancy
+      </text>
+      <text x="140" y="70" font-family="Poppins, sans-serif" font-size="32" font-weight="800" fill="#D4261A" text-anchor="middle">
+        40%
+      </text>
+      <text x="140" y="100" font-family="Poppins, sans-serif" font-size="24" font-weight="700" fill="#D4261A" text-anchor="middle">
+        £3.56M
+      </text>
+
+      <!-- Percentage Bar -->
+      <rect x="15" y="120" width="250" height="16" fill="#FFE8E0" rx="8"/>
+      <rect x="15" y="120" width="100" height="16" fill="#D4261A" rx="8"/>
+
+      <!-- Cost Items -->
+      <g transform="translate(15, 155)">
+        <!-- Item 1: Team -->
+        <rect x="0" y="0" width="6" height="35" fill="#D4261A" opacity="0.4" rx="3"/>
+        <text x="15" y="12" font-family="Poppins, sans-serif" font-size="15" font-weight="700" fill="#D4261A">
+          £1.4M
+        </text>
+        <text x="15" y="30" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#264653">
+          4-5 FTE Consultancy Team
+        </text>
+
+        <!-- Item 2: Platform -->
+        <rect x="0" y="45" width="6" height="30" fill="#D4261A" opacity="0.4" rx="3"/>
+        <text x="15" y="57" font-family="Poppins, sans-serif" font-size="15" font-weight="700" fill="#D4261A">
+          £800k
+        </text>
+        <text x="15" y="72" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#264653">
+          Platform & Digital
+        </text>
+
+        <!-- Item 3: Dev Lab -->
+        <rect x="0" y="85" width="6" height="30" fill="#D4261A" opacity="0.4" rx="3"/>
+        <text x="15" y="97" font-family="Poppins, sans-serif" font-size="15" font-weight="700" fill="#D4261A">
+          £600k
+        </text>
+        <text x="15" y="112" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#264653">
+          Development Lab
+        </text>
+
+        <!-- Item 4: Governance -->
+        <rect x="0" y="125" width="6" height="30" fill="#D4261A" opacity="0.4" rx="3"/>
+        <text x="15" y="137" font-family="Poppins, sans-serif" font-size="15" font-weight="700" fill="#D4261A">
+          £400k
+        </text>
+        <text x="15" y="152" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#264653">
+          Community Governance
+        </text>
+
+        <!-- Item 5: Emergency -->
+        <rect x="0" y="165" width="6" height="30" fill="#D4261A" opacity="0.4" rx="3"/>
+        <text x="15" y="177" font-family="Poppins, sans-serif" font-size="15" font-weight="700" fill="#D4261A">
+          £200k
+        </text>
+        <text x="15" y="192" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#264653">
+          Emergency Fund
+        </text>
+
+        <!-- Item 6: Contingency -->
+        <rect x="0" y="205" width="6" height="30" fill="#D4261A" opacity="0.4" rx="3"/>
+        <text x="15" y="217" font-family="Poppins, sans-serif" font-size="15" font-weight="700" fill="#D4261A">
+          £160k
+        </text>
+        <text x="15" y="232" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#264653">
+          Contingency
+        </text>
+      </g>
+
+      <!-- Icon: Stewardship -->
+      <circle cx="140" cy="415" r="20" fill="#D4261A" opacity="0.2"/>
+      <text x="140" y="425" font-size="24" text-anchor="middle">🎯</text>
+    </g>
+  </g>
+
+  <!-- Footer Notes -->
+  <g transform="translate(50, 560)">
+    <text x="0" y="0" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#666">
+      <tspan fill="#2A9D8F">■ Partnership</tspan> = Embedded roles creating systems change from inside institutions
+    </text>
+    <text x="400" y="0" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#666">
+      <tspan fill="#D4261A">■ Consultancy</tspan> = Central team stewarding democratic infrastructure development
+    </text>
+  </g>
+
+  <!-- BLKOUT Attribution -->
+  <text x="400" y="590" font-family="Poppins, sans-serif" font-size="10" font-weight="600" fill="#264653" text-anchor="middle">
+    BLKOUT | Community-Owned Liberation Platform
+  </text>
+</svg>

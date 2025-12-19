@@ -1,0 +1,166 @@
+<svg width="1000" height="500" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Development Lab Timeline: Years 1-5 vs 6-10 -->
+  <!-- Liberation Teal + Warm Gold Design System -->
+
+  <!-- Background -->
+  <rect width="1000" height="500" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="500" y="40" font-family="Poppins, sans-serif" font-size="28" font-weight="700" fill="#264653" text-anchor="middle">
+    Development Lab Approach
+  </text>
+  <text x="500" y="70" font-family="Poppins, sans-serif" font-size="16" font-weight="500" fill="#666" text-anchor="middle" font-style="italic">
+    Responding to 'Then' Not Problems of 'Now'
+  </text>
+
+  <!-- Timeline Container -->
+  <g transform="translate(80, 120)">
+
+    <!-- Phase 1: Years 1-5 (Learning + Bridging) -->
+    <g id="phase-1">
+      <!-- Background -->
+      <rect x="0" y="0" width="420" height="300" fill="#F0F9F8" rx="8"/>
+      <rect x="0" y="0" width="420" height="8" fill="#2A9D8F" rx="4"/>
+
+      <!-- Header -->
+      <text x="210" y="40" font-family="Poppins, sans-serif" font-size="24" font-weight="700" fill="#2A9D8F" text-anchor="middle">
+        YEARS 1-5
+      </text>
+      <text x="210" y="70" font-family="Poppins, sans-serif" font-size="18" font-weight="600" fill="#264653" text-anchor="middle">
+        Learning + Bridging
+      </text>
+
+      <!-- Activities -->
+      <g transform="translate(30, 95)">
+        <!-- Activity 1 -->
+        <circle cx="0" cy="0" r="8" fill="#2A9D8F"/>
+        <text x="20" y="5" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#264653">
+          Embedded Roles Document Learning
+        </text>
+        <text x="20" y="22" font-family="Inter, sans-serif" font-size="12" fill="#666">
+          What's working? What gaps exist in systems?
+        </text>
+
+        <!-- Activity 2 -->
+        <circle cx="0" cy="55" r="8" fill="#2A9D8F"/>
+        <text x="20" y="60" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#264653">
+          Service Gap Bridging Fund Active
+        </text>
+        <text x="20" y="77" font-family="Inter, sans-serif" font-size="12" fill="#666">
+          Responsive allocation addressing urgent needs
+        </text>
+
+        <!-- Activity 3 -->
+        <circle cx="0" cy="110" r="8" fill="#2A9D8F"/>
+        <text x="20" y="115" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#264653">
+          Community Governance Matures
+        </text>
+        <text x="20" y="132" font-family="Inter, sans-serif" font-size="12" fill="#666">
+          Democratic decision-making builds muscle
+        </text>
+
+        <!-- Activity 4 -->
+        <circle cx="0" cy="165" r="8" fill="#2A9D8F"/>
+        <text x="20" y="170" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#264653">
+          Evidence Synthesis
+        </text>
+        <text x="20" y="187" font-family="Inter, sans-serif" font-size="12" fill="#666">
+          What infrastructure is actually needed?
+        </text>
+      </g>
+
+      <!-- Bottom Icon -->
+      <g transform="translate(210, 250)">
+        <circle cx="0" cy="0" r="25" fill="#2A9D8F" opacity="0.15"/>
+        <text x="0" y="10" font-size="32" text-anchor="middle">🔬</text>
+      </g>
+    </g>
+
+    <!-- Arrow Between Phases -->
+    <g transform="translate(440, 150)">
+      <path d="M 0 0 L 60 0" stroke="#F4A261" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
+      <text x="30" y="-10" font-family="Poppins, sans-serif" font-size="14" font-weight="600" fill="#F4A261" text-anchor="middle">
+        Evidence-Based
+      </text>
+      <text x="30" y="25" font-family="Inter, sans-serif" font-size="12" fill="#666" text-anchor="middle">
+        Transition
+      </text>
+    </g>
+
+    <!-- Phase 2: Years 6-10 (Asset Development) -->
+    <g id="phase-2" transform="translate(520, 0)">
+      <!-- Background -->
+      <rect x="0" y="0" width="320" height="300" fill="#FFFBF5" rx="8"/>
+      <rect x="0" y="0" width="320" height="8" fill="#F4A261" rx="4"/>
+
+      <!-- Header -->
+      <text x="160" y="40" font-family="Poppins, sans-serif" font-size="24" font-weight="700" fill="#F4A261" text-anchor="middle">
+        YEARS 6-10
+      </text>
+      <text x="160" y="70" font-family="Poppins, sans-serif" font-size="18" font-weight="600" fill="#264653" text-anchor="middle">
+        Asset Development
+      </text>
+
+      <!-- Potential Assets (Community Decides) -->
+      <g transform="translate(30, 95)">
+        <text x="0" y="0" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#264653">
+          Community decides based on evidence:
+        </text>
+
+        <!-- Option 1 -->
+        <rect x="0" y="15" width="260" height="32" fill="#FFF" rx="4" stroke="#F4A261" stroke-width="2"/>
+        <text x="10" y="33" font-family="Inter, sans-serif" font-size="12" fill="#264653">
+          🏠 Community Land Trust Partnership?
+        </text>
+
+        <!-- Option 2 -->
+        <rect x="0" y="55" width="260" height="32" fill="#FFF" rx="4" stroke="#F4A261" stroke-width="2"/>
+        <text x="10" y="73" font-family="Inter, sans-serif" font-size="12" fill="#264653">
+          📹 Media Cooperative?
+        </text>
+
+        <!-- Option 3 -->
+        <rect x="0" y="95" width="260" height="32" fill="#FFF" rx="4" stroke="#F4A261" stroke-width="2"/>
+        <text x="10" y="113" font-family="Inter, sans-serif" font-size="12" fill="#264653">
+          📚 Community Archive?
+        </text>
+
+        <!-- Option 4 -->
+        <rect x="0" y="135" width="260" height="32" fill="#FFF" rx="4" stroke="#F4A261" stroke-width="2"/>
+        <text x="10" y="153" font-family="Inter, sans-serif" font-size="12" fill="#264653">
+          💼 Business Incubation?
+        </text>
+
+        <!-- Option 5 -->
+        <rect x="0" y="175" width="260" height="32" fill="#FFF" rx="4" stroke="#F4A261" stroke-width="2"/>
+        <text x="10" y="193" font-family="Inter, sans-serif" font-size="12" fill="#264653">
+          💚 Social Care Innovation?
+        </text>
+      </g>
+
+      <!-- Bottom Icon -->
+      <g transform="translate(160, 250)">
+        <circle cx="0" cy="0" r="25" fill="#F4A261" opacity="0.15"/>
+        <text x="0" y="10" font-size="32" text-anchor="middle">🏗️</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Key Principles -->
+  <g transform="translate(80, 440)">
+    <rect x="0" y="0" width="840" height="45" fill="#F0F9F8" rx="6" stroke="#2A9D8F" stroke-width="2"/>
+    <text x="420" y="20" font-family="Poppins, sans-serif" font-size="14" font-weight="600" fill="#2A9D8F" text-anchor="middle">
+      NOT locking into fixed infrastructure before evidence emerges
+    </text>
+    <text x="420" y="37" font-family="Inter, sans-serif" font-size="12" fill="#264653" text-anchor="middle">
+      Community controls what gets built • Evidence heals guesswork • Democracy heals paternalism
+    </text>
+  </g>
+
+  <!-- Arrow Marker Definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#F4A261" />
+    </marker>
+  </defs>
+</svg>
